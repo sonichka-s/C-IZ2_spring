@@ -24,17 +24,26 @@ jobs:
       - name: running test
         run: make run-tests
 
-      - name: get test coverage
-        run: make get-all-coverage
+  valgrind:
+    runs-on: ubuntu-latest
 
-      - name: preparing-lcov
-        run: mkdir coverage && mkdir coverage-output
+    steps:
+      - uses: actions/checkout@v2
 
-      - name: generate-gcov
-        run: cd build && gcov ../build/src/storage/CMakeFiles/storage.dir/storage.c.gcno && cp -rf ../build/src/storage/CMakeFiles/storage.dir/ .
+      - name: install gtest
+        run: sudo apt install libgtest-dev
 
-      - name: generate-lcov
-        run: lcov --capture --directory=coverage --output-file=coverage.info
+      - name: update
+        run: sudo apt-get update
 
-      - name: generate-coverage-html
-        run: genhtml coverage.info --output-directory=coverage-output
+      - name: install valgrind
+        run: sudo apt-get install valgrind
+
+      - name: build
+        run: cmake -Dtest=true -B ./build
+
+      - name: make
+        run: cmake --build ./build
+
+      - name: run-gtests
+        run: run-valgrind
