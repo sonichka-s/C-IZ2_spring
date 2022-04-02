@@ -48,7 +48,6 @@ TEST(matrix_storage, get_size) {
     EXPECT_EQ(test_m->cols, default_cols);
 
     free(test_m);
-    free(test_input);
 }
 
 TEST(matrx_storage, fill_storage) {
