@@ -1,14 +1,14 @@
 build:
 	 mkdir build && cd build && cmake .. && cmake --build .
 
+build-tests:
+	mkdir build && cd build && cmake .. && cmake --build . &&
+
 run:
 	./build/src/main
 
 run-tests:
-	./build/tests/matrix_storage/matrix_storage && ./build/tests/mirroring/main && ./build/tests/mirroring_async/main
-
-build-tests:
-	cd build && make && run-tests
+	./build/tests/matrix_storage/test_matrix_storage && ./build/tests/mirroring/test_mirroring && ./build/tests/mirroring_async/test_mirroring_async
 
 generate-lcov:
 	lcov --coverage --directory=coverage --output-file=coverage.info
