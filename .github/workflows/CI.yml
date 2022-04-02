@@ -22,7 +22,7 @@ jobs:
         run: make build
 
       - name: running test
-        run: cd build && make && tests/matrix_storage/matrix_storage
+        run: make run-tests
 
       - name: get test coverage
         run: make get-all-coverage
