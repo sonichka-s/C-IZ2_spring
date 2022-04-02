@@ -1,0 +1,161 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "tests/mirroring/test_mirroring"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"tests/mirroring/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 6,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -Wall -Werror -Wpedantic -g"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/home/sonichka/Documents/here_we_go_again/с-2/C-IZ2_spring/tests/mirroring"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/sonichka/Documents/here_we_go_again/с-2/C-IZ2_spring/src/mirroring/sync"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/sonichka/Documents/here_we_go_again/с-2/C-IZ2_spring/src/mirroring/sync/../."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/sonichka/Documents/here_we_go_again/с-2/C-IZ2_spring/src/matrix_storage"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "mirroring::@c56a286679fba15d0271"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "matrix_storage::@d0e1ad8ab66b850aec5f"
+		}
+	],
+	"id" : "test_mirroring::@62492812d80b84accaec",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-Wall -Werror -Wpedantic -g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libgtest.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "src/mirroring/sync/libmirroring.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "src/matrix_storage/libmatrix_storage.a",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "test_mirroring",
+	"nameOnDisk" : "test_mirroring",
+	"paths" : 
+	{
+		"build" : "tests/mirroring",
+		"source" : "tests/mirroring"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "tests/mirroring/main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "tests/mirroring/mirroring.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

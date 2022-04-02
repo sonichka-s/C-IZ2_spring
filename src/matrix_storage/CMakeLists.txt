@@ -1,0 +1,2 @@
+add_library(matrix_storage matrix_storage.c matrix_storage.h)
+target_include_directories(matrix_storage PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
