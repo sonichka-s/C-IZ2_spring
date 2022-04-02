@@ -8,7 +8,7 @@ run:
 	./build/src/main
 
 run-tests:
-	./build/tests/matrix_storage/test_matrix_storage && ./build/tests/mirroring/test_mirroring && ./build/tests/mirroring_async/test_mirroring_async
+	./build/tests/matrix_storage/test_matrix_storage && ./build/tests/mirroring/test_mirroring
 
 generate-lcov:
 	lcov --coverage --directory=coverage --output-file=coverage.info
