@@ -5,7 +5,7 @@ run:
 	./build/src/main
 
 run-tests:
-	./build/tests/matrix_storage/main && ./build/tests/mirroring/main && ./build/tests/mirroring_async/main
+	./build/tests/matrix_storage/matrix_storage && ./build/tests/mirroring/main && ./build/tests/mirroring_async/main
 
 build-tests:
 	cd build && make && run-tests
